@@ -19,11 +19,12 @@ class Camera: NSObject, ObservableObject {
     
     // 카메라 셋업 과정을 담당하는 함수, positio
     func setUpCamera() {
-        if let device = AVCaptureDevice.default(.builtInUltraWideCamera, for: .video, position: .back) {
+        if let device = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back) {
             do { // 카메라가 사용 가능하면 세션에 input과 output을 연결
                 videoDeviceInput = try AVCaptureDeviceInput(device: device)
                 if session.canAddInput(videoDeviceInput) {
                     session.addInput(videoDeviceInput)
+    
                 }
                 
                 if session.canAddOutput(output) {
@@ -31,6 +32,7 @@ class Camera: NSObject, ObservableObject {
                     output.isHighResolutionCaptureEnabled = true
                     output.maxPhotoQualityPrioritization = .quality
                 }
+                
                 session.startRunning() // 세션 시작
             } catch {
                 print(error) // 에러 프린트

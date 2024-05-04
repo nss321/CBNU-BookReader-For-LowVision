@@ -10,10 +10,13 @@ import AVFoundation
 
 struct CameraView: View {
     @ObservedObject var viewModel = CameraViewModel()
+    let screenSize = UIScreen.main.bounds.size
     
     var body: some View {
         ZStack {
             viewModel.cameraPreview
+                .frame(width: screenSize.width, height: screenSize.width * 1.3333)
+                .padding(.bottom, 72)
                 .ignoresSafeArea()
                 .onAppear {
                     viewModel.configure()
