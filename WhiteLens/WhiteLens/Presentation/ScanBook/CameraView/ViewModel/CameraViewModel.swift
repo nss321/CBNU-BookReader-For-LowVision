@@ -5,7 +5,6 @@
 //  Created by BAE on 5/2/24.
 //
 
-import Foundation
 import SwiftUI
 import AVFoundation
 
@@ -13,6 +12,7 @@ class CameraViewModel: ObservableObject {
     private let model: Camera
     private let session: AVCaptureSession
     let cameraPreview: AnyView
+    
     
     @Published var isFlashOn = false
     @Published var isSilentModeOn = false

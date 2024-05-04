@@ -11,6 +11,8 @@
 		1131E8892BE34F2B00D40120 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131E8882BE34F2B00D40120 /* CameraView.swift */; };
 		1131E88D2BE34F7D00D40120 /* BookListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131E88C2BE34F7D00D40120 /* BookListView.swift */; };
 		1131E8902BE35D7A00D40120 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131E88F2BE35D7A00D40120 /* CameraViewModel.swift */; };
+		1131E8932BE3616100D40120 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131E8922BE3616100D40120 /* Camera.swift */; };
+		1131E8972BE6887A00D40120 /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131E8962BE6887A00D40120 /* CameraPreviewView.swift */; };
 		1146863F2BC021A20072F8D8 /* WhiteLensApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1146863E2BC021A20072F8D8 /* WhiteLensApp.swift */; };
 		114686412BC021A20072F8D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114686402BC021A20072F8D8 /* ContentView.swift */; };
 		114686432BC021A20072F8D8 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114686422BC021A20072F8D8 /* Item.swift */; };
@@ -23,6 +25,8 @@
 		1131E8882BE34F2B00D40120 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		1131E88C2BE34F7D00D40120 /* BookListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListView.swift; sourceTree = "<group>"; };
 		1131E88F2BE35D7A00D40120 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
+		1131E8922BE3616100D40120 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		1131E8962BE6887A00D40120 /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
 		1146863B2BC021A20072F8D8 /* WhiteLens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhiteLens.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1146863E2BC021A20072F8D8 /* WhiteLensApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteLensApp.swift; sourceTree = "<group>"; };
 		114686402BC021A20072F8D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +75,7 @@
 		1131E8842BE34EF200D40120 /* ScanBook */ = {
 			isa = PBXGroup;
 			children = (
+				1131E8942BE6885E00D40120 /* CameraPreviewView */,
 				1131E8862BE34F0A00D40120 /* CameraView */,
 			);
 			path = ScanBook;
@@ -125,6 +130,30 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		1131E8912BE3615900D40120 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1131E8922BE3616100D40120 /* Camera.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1131E8942BE6885E00D40120 /* CameraPreviewView */ = {
+			isa = PBXGroup;
+			children = (
+				1131E8952BE6886D00D40120 /* View */,
+			);
+			path = CameraPreviewView;
+			sourceTree = "<group>";
+		};
+		1131E8952BE6886D00D40120 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1131E8962BE6887A00D40120 /* CameraPreviewView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		114686322BC021A20072F8D8 = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +173,7 @@
 		1146863D2BC021A20072F8D8 /* WhiteLens */ = {
 			isa = PBXGroup;
 			children = (
+				1131E8912BE3615900D40120 /* Model */,
 				1131E87F2BE347BF00D40120 /* Presentation */,
 				1146863E2BC021A20072F8D8 /* WhiteLensApp.swift */,
 				114686402BC021A20072F8D8 /* ContentView.swift */,
@@ -232,7 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1131E8932BE3616100D40120 /* Camera.swift in Sources */,
 				114686412BC021A20072F8D8 /* ContentView.swift in Sources */,
+				1131E8972BE6887A00D40120 /* CameraPreviewView.swift in Sources */,
 				1131E88D2BE34F7D00D40120 /* BookListView.swift in Sources */,
 				1131E8832BE347F300D40120 /* LaunchView.swift in Sources */,
 				114686432BC021A20072F8D8 /* Item.swift in Sources */,
