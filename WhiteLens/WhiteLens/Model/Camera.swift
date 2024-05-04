@@ -15,7 +15,7 @@ class Camera: NSObject, ObservableObject {
     var videoDeviceInput: AVCaptureDeviceInput!
     let output = AVCapturePhotoOutput()
     var photoData = Data(count: 0)
-    
+    @Published var recentImage: UIImage?
     
     // 카메라 셋업 과정을 담당하는 함수, positio
     func setUpCamera() {
@@ -24,7 +24,7 @@ class Camera: NSObject, ObservableObject {
                 videoDeviceInput = try AVCaptureDeviceInput(device: device)
                 if session.canAddInput(videoDeviceInput) {
                     session.addInput(videoDeviceInput)
-    
+                    
                 }
                 
                 if session.canAddOutput(output) {
@@ -71,7 +71,6 @@ class Camera: NSObject, ObservableObject {
         print("[Camera]: Photo's taken")
     }
     
-    // ✅ 추가
     func savePhoto(_ imageData: Data) {
         guard let image = UIImage(data: imageData) else { return }
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
@@ -94,8 +93,8 @@ extension Camera: AVCapturePhotoCaptureDelegate {
     
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         guard let imageData = photo.fileDataRepresentation() else { return }
+        self.recentImage = UIImage(data: imageData)
         self.savePhoto(imageData)
-        
         print("[CameraModel]: Capture routine's done")
     }
 }
