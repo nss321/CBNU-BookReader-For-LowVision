@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import VisionKit
 import Vision
 
 struct OCRView: View {
@@ -19,7 +18,6 @@ struct OCRView: View {
             .onAppear {
                 viewModel.recognizeText(image: image)
             }
-        
     }
     
     var imageView: some View {

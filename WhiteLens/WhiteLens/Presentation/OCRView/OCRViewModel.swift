@@ -6,7 +6,7 @@
 //
 
 import Vision
-import VisionKit
+import SwiftUI
 
 class OCRViewModel: ObservableObject {
     @Published var OCRString: String?
