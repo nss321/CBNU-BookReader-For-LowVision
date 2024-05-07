@@ -13,10 +13,15 @@ class CameraViewModel: ObservableObject {
     private let model: Camera
     private let session: AVCaptureSession
     let cameraPreview: AnyView
+    
     private var subscriptions = Set<AnyCancellable>()
     @Published var recentImage: UIImage?
     @Published var isFlashOn = false
     @Published var isSilentModeOn = false
+    
+    @Published var selectedImage: UIImage?
+    @Published var imagePickerPresented: Bool = false
+    @Published var OCRViewPresented: Bool = false
     
     func configure() {
         model.requestAndCheckPermissions()

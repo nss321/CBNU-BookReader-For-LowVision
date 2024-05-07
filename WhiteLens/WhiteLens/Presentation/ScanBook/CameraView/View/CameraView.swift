@@ -21,7 +21,7 @@ struct CameraView: View {
                 .onAppear {
                     viewModel.configure()
                 }
-            
+
             VStack {
                 HStack {
                     // 셔터사운드 온오프
@@ -46,8 +46,8 @@ struct CameraView: View {
                 Spacer()
                 
                 HStack{
-                    // 찍은 사진 미리보기, 일단 액션 X
-                    Button(action: {}) {
+                    // 찍은 사진 미리보기
+                    Button(action: { viewModel.imagePickerPresented.toggle() }) {
                         if let previewImage = viewModel.recentImage {
                             Image(uiImage: previewImage)
                                 .resizable()
@@ -94,6 +94,16 @@ struct CameraView: View {
             }
             .foregroundStyle(.white)
         }
+        .sheet(isPresented: $viewModel.imagePickerPresented, onDismiss: {
+            viewModel.OCRViewPresented.toggle()
+        }, content: {
+            ImagePicker(image: $viewModel.selectedImage, isPresented: $viewModel.imagePickerPresented)
+        })
+        .sheet(isPresented: $viewModel.OCRViewPresented, content: {
+            if let image = viewModel.selectedImage {
+                OCRView(image: image)
+            }
+        })
     }
 }
 
