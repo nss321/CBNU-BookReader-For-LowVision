@@ -27,8 +27,4 @@ class PhotoPickerViewModel: ObservableObject {
             }
         }
     }
-    
-    func removeSelectedImage() {
-        self.image = nil
-    }
 }
