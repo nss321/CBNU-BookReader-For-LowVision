@@ -21,7 +21,7 @@ struct CameraView: View {
                 .onAppear {
                     viewModel.configure()
                 }
-
+            
             VStack {
                 HStack {
                     // 셔터사운드 온오프
@@ -96,16 +96,6 @@ struct CameraView: View {
         }
         .sheet(isPresented: $viewModel.imagePickerPresented, content: {
             PhotoPickerView(viewModel: PhotoPickerViewModel())
-        })
-//        .sheet(isPresented: $viewModel.imagePickerPresented, onDismiss: {
-//            viewModel.OCRViewPresented.toggle()
-//        }, content: {
-//            ImagePicker(image: $viewModel.selectedImage, isPresented: $viewModel.imagePickerPresented)
-//        })
-        .sheet(isPresented: $viewModel.OCRViewPresented, content: {
-            if let image = viewModel.selectedImage {
-                OCRView(image: image)
-            }
         })
     }
 }

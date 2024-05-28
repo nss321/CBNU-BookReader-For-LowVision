@@ -32,9 +32,7 @@ struct OCRView: View {
                     .multilineTextAlignment(.leading)
             }
         }
-        
     }
-    
 }
 
 #Preview {

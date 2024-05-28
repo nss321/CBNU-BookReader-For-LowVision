@@ -11,14 +11,6 @@ import PhotosUI
 struct PhotoPickerView: View {
     @ObservedObject var viewModel: PhotoPickerViewModel
     
-//    @Binding var image: UIImage?
-//    @State var selectedItems: [PhotosPickerItem] = []
-    
-//    init() {
-//        @ObservedObject var viewModel = PhotoPickerViewModel()
-//        self.viewModel = viewModel
-//    }
-    
     var body: some View {
         VStack {
             if let image = viewModel.image {
@@ -26,13 +18,13 @@ struct PhotoPickerView: View {
             } else {
                 
             }
-//            
+            
             PhotosPicker(
                 selection: $viewModel.selectedItems,
                 matching: .images,
                 photoLibrary: .shared()
             ) {
-                    Text("Select Image")
+                Text("Select Image")
             }
             .onChange(of: viewModel.selectedItems) { newItems in
                 viewModel.loadImage(from: newItems.first)
@@ -54,7 +46,7 @@ struct PhotoPickerViewPreviewWrapper: View {
     init() {
         viewModel.image = UIImage(named: "ocrTestImage")
     }
-
+    
     var body: some View {
         PhotoPickerView(viewModel: viewModel)
     }
