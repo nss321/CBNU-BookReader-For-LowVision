@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1129B6D02C061A4E00F33CDD /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1129B6CF2C061A4E00F33CDD /* PhotoPickerView.swift */; };
+		1129B6D52C061A6700F33CDD /* PhotoPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1129B6D42C061A6700F33CDD /* PhotoPickerViewModel.swift */; };
 		1131E8832BE347F300D40120 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131E8822BE347F300D40120 /* LaunchView.swift */; };
 		1131E8892BE34F2B00D40120 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131E8882BE34F2B00D40120 /* CameraView.swift */; };
 		1131E88D2BE34F7D00D40120 /* BookListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131E88C2BE34F7D00D40120 /* BookListView.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1129B6CF2C061A4E00F33CDD /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
+		1129B6D42C061A6700F33CDD /* PhotoPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerViewModel.swift; sourceTree = "<group>"; };
 		1131E8822BE347F300D40120 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		1131E8882BE34F2B00D40120 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		1131E88C2BE34F7D00D40120 /* BookListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListView.swift; sourceTree = "<group>"; };
@@ -50,9 +54,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1129B6CE2C061A3300F33CDD /* PhotoPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				1129B6D22C061A5600F33CDD /* ViewModel */,
+				1129B6D12C061A5100F33CDD /* View */,
+			);
+			path = PhotoPickerView;
+			sourceTree = "<group>";
+		};
+		1129B6D12C061A5100F33CDD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1129B6CF2C061A4E00F33CDD /* PhotoPickerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1129B6D22C061A5600F33CDD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1129B6D42C061A6700F33CDD /* PhotoPickerViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		1131E87F2BE347BF00D40120 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				1129B6CE2C061A3300F33CDD /* PhotoPickerView */,
 				1131E8982BE9F3CF00D40120 /* OCRView */,
 				1131E8852BE34F0200D40120 /* ReadBook */,
 				1131E8842BE34EF200D40120 /* ScanBook */,
@@ -277,12 +307,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1131E8932BE3616100D40120 /* Camera.swift in Sources */,
+				1129B6D52C061A6700F33CDD /* PhotoPickerViewModel.swift in Sources */,
 				114686412BC021A20072F8D8 /* ContentView.swift in Sources */,
 				1131E89C2BE9F5FC00D40120 /* OCRViewModel.swift in Sources */,
 				1131E8972BE6887A00D40120 /* CameraPreviewView.swift in Sources */,
 				1131E88D2BE34F7D00D40120 /* BookListView.swift in Sources */,
 				1131E8832BE347F300D40120 /* LaunchView.swift in Sources */,
 				1131E89A2BE9F3E200D40120 /* OCRView.swift in Sources */,
+				1129B6D02C061A4E00F33CDD /* PhotoPickerView.swift in Sources */,
 				114686432BC021A20072F8D8 /* Item.swift in Sources */,
 				1131E8902BE35D7A00D40120 /* CameraViewModel.swift in Sources */,
 				1131E8892BE34F2B00D40120 /* CameraView.swift in Sources */,

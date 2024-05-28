@@ -95,7 +95,7 @@ struct CameraView: View {
             .foregroundStyle(.white)
         }
         .sheet(isPresented: $viewModel.imagePickerPresented, content: {
-            PhotoPickerView(image: $viewModel.selectedImage)
+            PhotoPickerView(viewModel: PhotoPickerViewModel())
         })
 //        .sheet(isPresented: $viewModel.imagePickerPresented, onDismiss: {
 //            viewModel.OCRViewPresented.toggle()
