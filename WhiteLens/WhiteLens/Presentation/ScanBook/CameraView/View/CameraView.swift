@@ -94,11 +94,14 @@ struct CameraView: View {
             }
             .foregroundStyle(.white)
         }
-        .sheet(isPresented: $viewModel.imagePickerPresented, onDismiss: {
-            viewModel.OCRViewPresented.toggle()
-        }, content: {
-            ImagePicker(image: $viewModel.selectedImage, isPresented: $viewModel.imagePickerPresented)
+        .sheet(isPresented: $viewModel.imagePickerPresented, content: {
+            PhotoPickerView(image: $viewModel.selectedImage)
         })
+//        .sheet(isPresented: $viewModel.imagePickerPresented, onDismiss: {
+//            viewModel.OCRViewPresented.toggle()
+//        }, content: {
+//            ImagePicker(image: $viewModel.selectedImage, isPresented: $viewModel.imagePickerPresented)
+//        })
         .sheet(isPresented: $viewModel.OCRViewPresented, content: {
             if let image = viewModel.selectedImage {
                 OCRView(image: image)

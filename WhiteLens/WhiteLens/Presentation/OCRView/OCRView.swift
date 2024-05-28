@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Vision
+import PhotosUI
 
 struct OCRView: View {
     
@@ -73,6 +74,45 @@ extension ImagePicker: UIViewControllerRepresentable {
             guard let image = info[.originalImage] as? UIImage else { return }
             self.parent.image = image
             self.parent.isPresented = false
+        }
+    }
+}
+
+struct PhotoPickerView: View {
+    @Binding var image: UIImage?
+    @State var selectedItems: [PhotosPickerItem] = []
+    
+    var body: some View {
+        VStack {
+            if let image = image {
+                OCRView(image: image)
+            } else {
+                Text("No Image Selected")
+                    .foregroundStyle(.gray)
+            }
+            
+            PhotosPicker(
+                selection: $selectedItems,
+                matching: .images,
+                photoLibrary: .shared()
+            ) {
+                    Text("Select Image")
+            }
+            .onChange(of: selectedItems) { newItems in
+                guard let firstItem = newItems.first else { return }
+                firstItem.loadTransferable(type: Data.self) { result in
+                    switch result {
+                    case .success(let data):
+                        if let data = data, let uiImage = UIImage(data: data) {
+                            self.image = uiImage
+                        }
+                    case .success(nil):
+                        print("No image was selected.")
+                    case .failure(let error):
+                        print("Failed to load image: \(error.localizedDescription)")
+                    }
+                }
+            }
         }
     }
 }

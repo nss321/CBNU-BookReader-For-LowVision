@@ -18,8 +18,7 @@ class OCRViewModel: ObservableObject {
         
         let request = VNRecognizeTextRequest { [weak self] request, error in
             // 결과값 옵셔널 바인딩
-            guard let result = request.results as? [VNRecognizedTextObservation],
-                  error == nil else { return }
+            guard let result = request.results as? [VNRecognizedTextObservation], error == nil else { return }
             // resultd에서 최대 후보군 1개에서 첫번째 후보를 String 타입으로 변환
             let text = result.compactMap { $0.topCandidates(1).first?.string }
                 .joined(separator: "\n")
