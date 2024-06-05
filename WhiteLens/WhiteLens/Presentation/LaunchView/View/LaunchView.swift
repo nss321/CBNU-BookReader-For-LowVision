@@ -6,52 +6,42 @@
 //
 
 import SwiftUI
-import UIKit
-
-enum MenuSelect: Int {
-    case none = 0
-    case scanBook, readBook
-}
 
 struct LaunchView: View {
-    @State private var menuNum: MenuSelect? = .none
-
     var body: some View {
         NavigationStack {
             VStack(spacing: 28) {
-                Button {
-                    print("1")
-                    menuNum = .scanBook
-                } label: {
+                
+                NavigationLink(
+                    destination: CameraView()
+                        .systemBackground()
+                ) {
                     Text("책 스캔하기")
                         .frame(width: 140, height: 60)
                         .background(.white)
                         .cornerRadius(10)
                 }
-                
-                Button {
-                    print("2")
-                    menuNum = .readBook
-                } label: {
+                NavigationLink(
+                    destination: OCRView(image: UIImage(named: "ocrTestImage")!)
+                        .systemBackground()
+                ) {
+                    Text("OCR 테스트")
+                        .frame(width: 140, height: 60)
+                        .background(.white)
+                        .cornerRadius(10)
+                }
+                NavigationLink(
+                    destination: BookListView()
+                        .modelContainer(for: [Book.self, ScannedContent.self])
+                ) {
                     Text("책 읽기")
                         .frame(width: 140, height: 60)
                         .background(.white)
                         .cornerRadius(10)
-
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color(uiColor: .secondarySystemBackground))
-            .navigationDestination(item: $menuNum) { Hashable in
-                switch Hashable {
-                case .scanBook:
-                    CameraView()
-                case .readBook:
-                    BookListView()
-                default:
-                    EmptyView()
-                }
-            }
+            .systemBackground()
         }
     }
 }
