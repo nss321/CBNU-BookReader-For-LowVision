@@ -23,25 +23,25 @@ struct CameraView: View {
                 }
             
             VStack {
-                HStack {
-                    // 셔터사운드 온오프
-                    Button(action: {viewModel.switchFlash()}) {
-                        Image(systemName: viewModel.isFlashOn ?
-                              "speaker.fill" : "speaker")
-                        .foregroundStyle(viewModel.isFlashOn ? .yellow : .white)
-                    }
-                    .padding(.horizontal, 30)
-                    
-                    // 플래시 온오프
-                    Button(action: {viewModel.switchSilent()}) {
-                        Image(systemName: viewModel.isSilentModeOn ?
-                              "bolt.fill" : "bolt")
-                        .foregroundStyle(viewModel.isSilentModeOn ? .yellow : .white)
-                    }
-                    .padding(.horizontal, 30)
-                }
-                .font(.system(size:25))
-                .padding()
+//                HStack {
+//                    // 셔터사운드 온오프
+//                    Button(action: {viewModel.switchFlash()}) {
+//                        Image(systemName: viewModel.isFlashOn ?
+//                              "speaker.fill" : "speaker")
+//                        .foregroundStyle(viewModel.isFlashOn ? .yellow : .white)
+//                    }
+//                    .padding(.horizontal, 30)
+//                    
+//                    // 플래시 온오프
+//                    Button(action: {viewModel.switchSilent()}) {
+//                        Image(systemName: viewModel.isSilentModeOn ?
+//                              "bolt.fill" : "bolt")
+//                        .foregroundStyle(viewModel.isSilentModeOn ? .yellow : .white)
+//                    }
+//                    .padding(.horizontal, 30)
+//                }
+//                .font(.system(size:25))
+//                .padding()
                 
                 Spacer()
                 

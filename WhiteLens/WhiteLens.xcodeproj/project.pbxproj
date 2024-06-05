@@ -22,6 +22,8 @@
 		114686432BC021A20072F8D8 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114686422BC021A20072F8D8 /* Item.swift */; };
 		114686452BC021A40072F8D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 114686442BC021A40072F8D8 /* Assets.xcassets */; };
 		114686482BC021A40072F8D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 114686472BC021A40072F8D8 /* Preview Assets.xcassets */; };
+		1197F2632C102C3B006F75D2 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1197F2622C102C3B006F75D2 /* Book.swift */; };
+		1197F2662C1031F1006F75D2 /* BackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1197F2652C1031F1006F75D2 /* BackgroundModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		114686422BC021A20072F8D8 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		114686442BC021A40072F8D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		114686472BC021A40072F8D8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1197F2622C102C3B006F75D2 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		1197F2652C1031F1006F75D2 /* BackgroundModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				1131E8922BE3616100D40120 /* Camera.swift */,
+				1197F2622C102C3B006F75D2 /* Book.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -217,6 +222,7 @@
 		1146863D2BC021A20072F8D8 /* WhiteLens */ = {
 			isa = PBXGroup;
 			children = (
+				1197F2642C1031D7006F75D2 /* Utils */,
 				1131E8912BE3615900D40120 /* Model */,
 				1131E87F2BE347BF00D40120 /* Presentation */,
 				1146863E2BC021A20072F8D8 /* WhiteLensApp.swift */,
@@ -234,6 +240,14 @@
 				114686472BC021A40072F8D8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1197F2642C1031D7006F75D2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1197F2652C1031F1006F75D2 /* BackgroundModifier.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +322,7 @@
 			files = (
 				1131E8932BE3616100D40120 /* Camera.swift in Sources */,
 				1129B6D52C061A6700F33CDD /* PhotoPickerViewModel.swift in Sources */,
+				1197F2632C102C3B006F75D2 /* Book.swift in Sources */,
 				114686412BC021A20072F8D8 /* ContentView.swift in Sources */,
 				1131E89C2BE9F5FC00D40120 /* OCRViewModel.swift in Sources */,
 				1131E8972BE6887A00D40120 /* CameraPreviewView.swift in Sources */,
@@ -318,6 +333,7 @@
 				114686432BC021A20072F8D8 /* Item.swift in Sources */,
 				1131E8902BE35D7A00D40120 /* CameraViewModel.swift in Sources */,
 				1131E8892BE34F2B00D40120 /* CameraView.swift in Sources */,
+				1197F2662C1031F1006F75D2 /* BackgroundModifier.swift in Sources */,
 				1146863F2BC021A20072F8D8 /* WhiteLensApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
