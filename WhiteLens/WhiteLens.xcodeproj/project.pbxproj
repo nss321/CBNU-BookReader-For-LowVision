@@ -22,6 +22,8 @@
 		114686432BC021A20072F8D8 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114686422BC021A20072F8D8 /* Item.swift */; };
 		114686452BC021A40072F8D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 114686442BC021A40072F8D8 /* Assets.xcassets */; };
 		114686482BC021A40072F8D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 114686472BC021A40072F8D8 /* Preview Assets.xcassets */; };
+		11708EC52C11AAA80092A997 /* BookListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11708EC42C11AAA80092A997 /* BookListViewModel.swift */; };
+		11708EC82C11BECB0092A997 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11708EC72C11BECB0092A997 /* DataSource.swift */; };
 		1197F2632C102C3B006F75D2 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1197F2622C102C3B006F75D2 /* Book.swift */; };
 		1197F2662C1031F1006F75D2 /* BackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1197F2652C1031F1006F75D2 /* BackgroundModifier.swift */; };
 /* End PBXBuildFile section */
@@ -43,6 +45,8 @@
 		114686422BC021A20072F8D8 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		114686442BC021A40072F8D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		114686472BC021A40072F8D8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		11708EC42C11AAA80092A997 /* BookListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewModel.swift; sourceTree = "<group>"; };
+		11708EC72C11BECB0092A997 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		1197F2622C102C3B006F75D2 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		1197F2652C1031F1006F75D2 /* BackgroundModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,6 +152,7 @@
 		1131E88A2BE34F6000D40120 /* BookList */ = {
 			isa = PBXGroup;
 			children = (
+				11708EC32C11AA470092A997 /* ViewModel */,
 				1131E88B2BE34F6900D40120 /* View */,
 			);
 			path = BookList;
@@ -222,6 +227,7 @@
 		1146863D2BC021A20072F8D8 /* WhiteLens */ = {
 			isa = PBXGroup;
 			children = (
+				11708EC62C11BEC00092A997 /* Data */,
 				1197F2642C1031D7006F75D2 /* Utils */,
 				1131E8912BE3615900D40120 /* Model */,
 				1131E87F2BE347BF00D40120 /* Presentation */,
@@ -240,6 +246,22 @@
 				114686472BC021A40072F8D8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		11708EC32C11AA470092A997 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				11708EC42C11AAA80092A997 /* BookListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		11708EC62C11BEC00092A997 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				11708EC72C11BECB0092A997 /* DataSource.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		1197F2642C1031D7006F75D2 /* Utils */ = {
@@ -321,10 +343,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1131E8932BE3616100D40120 /* Camera.swift in Sources */,
+				11708EC82C11BECB0092A997 /* DataSource.swift in Sources */,
 				1129B6D52C061A6700F33CDD /* PhotoPickerViewModel.swift in Sources */,
 				1197F2632C102C3B006F75D2 /* Book.swift in Sources */,
 				114686412BC021A20072F8D8 /* ContentView.swift in Sources */,
 				1131E89C2BE9F5FC00D40120 /* OCRViewModel.swift in Sources */,
+				11708EC52C11AAA80092A997 /* BookListViewModel.swift in Sources */,
 				1131E8972BE6887A00D40120 /* CameraPreviewView.swift in Sources */,
 				1131E88D2BE34F7D00D40120 /* BookListView.swift in Sources */,
 				1131E8832BE347F300D40120 /* LaunchView.swift in Sources */,

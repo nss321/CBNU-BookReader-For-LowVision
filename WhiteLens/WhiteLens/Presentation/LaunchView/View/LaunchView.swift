@@ -32,7 +32,6 @@ struct LaunchView: View {
                 }
                 NavigationLink(
                     destination: BookListView()
-                        .modelContainer(for: [Book.self, ScannedContent.self])
                 ) {
                     Text("책 읽기")
                         .frame(width: 140, height: 60)

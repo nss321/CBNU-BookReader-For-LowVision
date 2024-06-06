@@ -9,66 +9,51 @@ import SwiftUI
 import SwiftData
 
 struct BookListView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query(sort: \Book.title) private var books: [Book]
-    
-    @State private var showAlert = false
-    @State private var newBookTitle = ""
+    @StateObject private var viewModel = BookListViewModel()
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(books) { book in
-                    NavigationLink(
-                        destination: BookDetailView(book: book)
-                    ) {
-                        Text(book.title)
+                ForEach(viewModel.books) { book in
+                    HStack {
+                        NavigationLink(destination: BookDetailView(book: book)) {
+                            Text(book.title)
+                        }
+                        Spacer()
+                        Button(action: {
+                            if let index = viewModel.books.firstIndex(of: book) {
+                                viewModel.deleteBook(at: IndexSet(integer: index))
+                            }
+                        }) {
+                            Image(systemName: "trash")
+                                .foregroundColor(.gray)
+                                .accessibilityLabel("Delete \(book.title)")
+                        }
                     }
                 }
+                .onDelete(perform: viewModel.deleteBook)
             }
             .navigationTitle("책 목록")
             .toolbar {
                 Button(action: {
-                    showAlert = true
+                    viewModel.showAlert = true
                 }) {
                     Label("책 추가하기", systemImage: "plus")
                 }
+                EditButton()
             }
-            .alert("책의 제목을 적는 창입니다.", isPresented: $showAlert) {
-                TextField("이곳에 제목을 입력합니다.",text: $newBookTitle)
-                Button("완료", action: addBook)
+            .alert("책의 제목을 적는 창입니다.", isPresented: $viewModel.showAlert) {
+                TextField("이곳에 제목을 입력합니다.",text: $viewModel.newBookTitle)
+                    .autocorrectionDisabled()
+                Button("완료", action: viewModel.addBook)
                 Button("취소", role: .cancel) { }
             }
         }
     }
-    
-    private func addBook() {
-        guard !newBookTitle.isEmpty else { return }
-        if books.contains(where: { $0.title == newBookTitle }) {
-            // 중복된 책 제목 경고
-            showAlert = true
-            newBookTitle = ""
-            return
-        }
-        
-        let newContent = ScannedContent(pageContent: ["Page 1 content", "Page 2 content"])
-        let newBook = Book(title: newBookTitle, contents: [newContent])
-        
-        modelContext.insert(newBook)
-        
-        do {
-            try modelContext.save()
-            newBookTitle = ""
-        } catch {
-            print("Failed to save context: \(error)")
-        }
-    }
-    
 }
 
 #Preview {
     BookListView()
-        .modelContainer(for: [Book.self, ScannedContent.self])
 }
 
 
@@ -88,3 +73,4 @@ struct BookDetailView: View {
         .navigationTitle(book.title)
     }
 }
+
