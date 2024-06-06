@@ -25,9 +25,12 @@ class Book {
 class ScannedContent {
     @Attribute(.unique) var id: UUID
     var pageContent: [String]
+    var createdAt: Date
 
-    init(pageContent: [String]) {
+
+    init(pageContent: [String], createdAt: Date = Date()) {
         self.id = UUID()
         self.pageContent = pageContent
+        self.createdAt = createdAt
     }
 }
