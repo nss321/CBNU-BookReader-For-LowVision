@@ -38,6 +38,7 @@ class CameraViewModel: ObservableObject {
     func capturePhoto() {
         model.capturePhoto()
         print("[CameraViewModel]: Photo captured!")
+        OCRViewPresented.toggle()
     }
     
     func changeCamera() {

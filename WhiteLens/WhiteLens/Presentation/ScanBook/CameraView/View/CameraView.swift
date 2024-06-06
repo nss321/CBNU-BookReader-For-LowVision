@@ -45,6 +45,11 @@ struct CameraView: View {
         .sheet(isPresented: $viewModel.imagePickerPresented, content: {
             PhotoPickerView(viewModel: PhotoPickerViewModel())
         })
+        .sheet(isPresented: $viewModel.OCRViewPresented) {
+            if let capturedImage = viewModel.recentImage {
+                OCRView(image: capturedImage)
+            }
+        }
     }
     
     var thumbnailButton: some View {
