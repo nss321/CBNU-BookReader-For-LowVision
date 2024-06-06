@@ -26,20 +26,18 @@ struct BookListView: View {
                     }
                 }
             }
-            .navigationTitle("Books")
+            .navigationTitle("책 목록")
             .toolbar {
                 Button(action: {
                     showAlert = true
                 }) {
-                    Label("Add Book", systemImage: "plus")
+                    Label("책 추가하기", systemImage: "plus")
                 }
             }
-            .alert("Add New Book", isPresented: $showAlert) {
-                TextField("Book Title", text: $newBookTitle)
-                Button("Add", action: addBook)
-                Button("Cancel", role: .cancel) { }
-            } message: {
-                Text("Enter the title of the new book.")
+            .alert("책의 제목을 적는 창입니다.", isPresented: $showAlert) {
+                TextField("이곳에 제목을 입력합니다.",text: $newBookTitle)
+                Button("완료", action: addBook)
+                Button("취소", role: .cancel) { }
             }
         }
     }
