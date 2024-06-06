@@ -37,7 +37,7 @@ class BookListViewModel: ObservableObject {
             return
         }
         
-        let newContent = ScannedContent(pageContent: ["Page 1 content", "Page 2 content"])
+        let newContent = ScannedContent(pageContent: [])
         let newBook = Book(title: newBookTitle, contents: [newContent])
         
         dataSource.addBook(book: newBook)
