@@ -16,18 +16,18 @@ struct PhotoPickerView: View {
             if let image = viewModel.image {
                 OCRView(image: image)
             } else {
-                
+        
             }
             
             PhotosPicker(
-                selection: $viewModel.selectedItems,
+                selection: $viewModel.selectedItem,
                 matching: .images,
                 photoLibrary: .shared()
             ) {
                 Text("Select Image")
             }
-            .onChange(of: viewModel.selectedItems) { newItems in
-                viewModel.loadImage(from: newItems.first)
+            .onChange(of: viewModel.selectedItem) {
+                viewModel.loadImage(from: viewModel.selectedItem)
             }
         }
     }
