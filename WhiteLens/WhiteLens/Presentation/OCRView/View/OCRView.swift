@@ -19,6 +19,9 @@ struct OCRView: View {
             .onAppear {
                 viewModel.recognizeText(image: image)
             }
+            .onChange(of: image) {
+                viewModel.recognizeText(image: image)
+            }
     }
     
     var imageView: some View {
