@@ -202,8 +202,8 @@
 		1131E8982BE9F3CF00D40120 /* OCRView */ = {
 			isa = PBXGroup;
 			children = (
-				1131E8992BE9F3E200D40120 /* OCRView.swift */,
-				1131E89B2BE9F5FB00D40120 /* OCRViewModel.swift */,
+				11708ECA2C11DBB60092A997 /* ViewModel */,
+				11708EC92C11DBB10092A997 /* View */,
 			);
 			path = OCRView;
 			sourceTree = "<group>";
@@ -262,6 +262,22 @@
 				11708EC72C11BECB0092A997 /* DataSource.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		11708EC92C11DBB10092A997 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1131E8992BE9F3E200D40120 /* OCRView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		11708ECA2C11DBB60092A997 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1131E89B2BE9F5FB00D40120 /* OCRViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		1197F2642C1031D7006F75D2 /* Utils */ = {
