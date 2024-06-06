@@ -42,11 +42,18 @@ class OCRViewModel: ObservableObject {
         request.usesLanguageCorrection = true
         
         do {
-            print(try request.supportedRecognitionLanguages())
+//            print(try request.supportedRecognitionLanguages())
             try handler.perform([request])
         } catch {
             print(error)
         }
         
+    }
+    
+    func saveOCRString(to book: Book) {
+        guard let ocrString = self.OCRString else { return }
+        let content = ScannedContent(pageContent: [ocrString], createdAt: Date())
+        book.contents.append(content)
+        DataSource.shared.updateBook(book)
     }
 }
