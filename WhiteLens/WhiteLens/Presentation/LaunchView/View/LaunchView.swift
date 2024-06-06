@@ -16,7 +16,7 @@ struct LaunchView: View {
                     destination: CameraView()
                         .systemBackground()
                 ) {
-                    Text("책 스캔하기")
+                    Text("촬영하기")
                         .frame(width: 140, height: 60)
                         .background(.white)
                         .cornerRadius(10)
@@ -25,7 +25,7 @@ struct LaunchView: View {
                     destination: OCRView(image: UIImage(named: "ocrTestImage")!)
                         .systemBackground()
                 ) {
-                    Text("OCR 테스트")
+                    Text("스캔하기")
                         .frame(width: 140, height: 60)
                         .background(.white)
                         .cornerRadius(10)
@@ -33,7 +33,7 @@ struct LaunchView: View {
                 NavigationLink(
                     destination: BookListView()
                 ) {
-                    Text("책 읽기")
+                    Text("책 목록")
                         .frame(width: 140, height: 60)
                         .background(.white)
                         .cornerRadius(10)
