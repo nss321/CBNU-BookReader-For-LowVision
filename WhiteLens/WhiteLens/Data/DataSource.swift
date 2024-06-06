@@ -29,7 +29,7 @@ final class DataSource: ObservableObject {
         fetchBooks()
     }
     
-    func addBook(book: Book){
+    func addBook(book: Book) {
         modelContext.insert(book)
         do {
             try modelContext.save()
@@ -39,9 +39,20 @@ final class DataSource: ObservableObject {
         }
     }
     
+    func updateBook(_ book: Book){
+        do {
+            try modelContext.save()
+        } catch {
+            fatalError(error.localizedDescription)
+        }
+    }
+    
     func fetchBooks() {
         do {
             books = try modelContext.fetch(FetchDescriptor<Book>())
+            books.forEach { book in
+                book.contents.sort(by: { $0.createdAt < $1.createdAt } )
+            }
         } catch {
             fatalError(error.localizedDescription)
         }
