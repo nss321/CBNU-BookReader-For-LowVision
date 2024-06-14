@@ -47,6 +47,7 @@
 		114686472BC021A40072F8D8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		11708EC42C11AAA80092A997 /* BookListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewModel.swift; sourceTree = "<group>"; };
 		11708EC72C11BECB0092A997 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		1173D18D2C1CAACE00C0D29C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1197F2622C102C3B006F75D2 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		1197F2652C1031F1006F75D2 /* BackgroundModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -227,6 +228,7 @@
 		1146863D2BC021A20072F8D8 /* WhiteLens */ = {
 			isa = PBXGroup;
 			children = (
+				1173D18D2C1CAACE00C0D29C /* Info.plist */,
 				11708EC62C11BEC00092A997 /* Data */,
 				1197F2642C1031D7006F75D2 /* Utils */,
 				1131E8912BE3615900D40120 /* Model */,
@@ -325,11 +327,12 @@
 			};
 			buildConfigurationList = 114686362BC021A20072F8D8 /* Build configuration list for PBXProject "WhiteLens" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = ko;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = 114686322BC021A20072F8D8;
 			productRefGroup = 1146863C2BC021A20072F8D8 /* Products */;
@@ -511,6 +514,7 @@
 				DEVELOPMENT_TEAM = W43DLLFB4Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WhiteLens/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "카메라 접근 허용";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "앨범 쓰기 권한 허용";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -543,6 +547,7 @@
 				DEVELOPMENT_TEAM = W43DLLFB4Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WhiteLens/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "카메라 접근 허용";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "앨범 쓰기 권한 허용";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
