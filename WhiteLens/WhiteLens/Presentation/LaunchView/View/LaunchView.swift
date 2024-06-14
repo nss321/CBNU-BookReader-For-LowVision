@@ -11,7 +11,6 @@ struct LaunchView: View {
     var body: some View {
         NavigationStack {
             VStack(spacing: 28) {
-                
                 NavigationLink(
                     destination: CameraView()
                         .systemBackground()
@@ -21,8 +20,10 @@ struct LaunchView: View {
                         .background(.white)
                         .cornerRadius(10)
                 }
+
                 NavigationLink(
-                    destination: OCRView(image: UIImage(named: "ocrTestImage")!)
+                    destination: PhotoPickerView(viewModel: PhotoPickerViewModel())
+//                        OCRView(image: UIImage(named: "ocrTestImage")!)
                         .systemBackground()
                 ) {
                     Text("스캔하기")

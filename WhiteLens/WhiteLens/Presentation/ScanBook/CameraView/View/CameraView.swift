@@ -35,9 +35,12 @@ struct CameraView: View {
                     shutterButton
                     
                     Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
                     
-                    switchButton
-                        .padding()
+//                    switchButton
+//                        .padding()
                 }
             }
             .foregroundStyle(.white)
@@ -97,5 +100,5 @@ struct CameraView: View {
 
 
 #Preview {
-    CameraView()
+//    CameraView()
 }

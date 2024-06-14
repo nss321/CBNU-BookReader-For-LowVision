@@ -27,7 +27,6 @@ class ScannedContent {
     var pageContent: [String]
     var createdAt: Date
 
-
     init(pageContent: [String], createdAt: Date = Date()) {
         self.id = UUID()
         self.pageContent = pageContent

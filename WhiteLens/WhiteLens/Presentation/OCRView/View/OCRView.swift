@@ -10,7 +10,6 @@ import Vision
 import PhotosUI
 
 struct OCRView: View {
-    
     @ObservedObject private var viewModel = OCRViewModel()
     @State private var showSheet = false
     @State private var selectedBook: Book?
@@ -29,7 +28,6 @@ struct OCRView: View {
                 BookSelectionView { book in
                     self.selectedBook = book
                     viewModel.saveOCRString(to: book)
-                    
                 }
             }
     }
@@ -40,7 +38,7 @@ struct OCRView: View {
                 .resizable()
                 .scaledToFit()
             ScrollView {
-                Text(viewModel.OCRString ?? "")
+                Text((viewModel.OCRString?.isEmpty ?? true) ? "인식된 텍스트가 없습니다." : viewModel.OCRString!)
                     .lineLimit(nil)
                     .multilineTextAlignment(.leading)
             }
@@ -55,7 +53,7 @@ struct OCRView: View {
 }
 
 #Preview {
-    OCRView(image: UIImage(named: "ocrTestImage")!)
+//    OCRView(image: UIImage(named: "ocrTestImage")!)
 }
 
 struct BookSelectionView: View {
@@ -86,12 +84,23 @@ struct BookSelectionView: View {
             .alert("책의 제목을 적는 창입니다.", isPresented: $isPresented) {
                 TextField("이곳에 제목을 입력합니다.",text: $text)
                     .autocorrectionDisabled()
-                Button("완료", action: {print(text)})
+                Button("완료", action: {
+                    addBook()
+                })
                 Button("취소", role: .cancel) { }
             }
         }
         .onAppear{
             dataSource.fetchBooks()
         }
+    }
+    
+    func addBook() {
+        if dataSource.books.contains(where: { $0.title == text }) {
+            return
+        }
+        let newBook = Book(title: text, contents: [])
+        dataSource.books.append(newBook)
+        dataSource.updateBook(newBook)
     }
 }
