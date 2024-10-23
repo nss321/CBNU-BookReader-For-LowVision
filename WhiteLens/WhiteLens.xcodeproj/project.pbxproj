@@ -7,20 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1129B6D02C061A4E00F33CDD /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1129B6CF2C061A4E00F33CDD /* PhotoPickerView.swift */; };
+		1129B6D52C061A6700F33CDD /* PhotoPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1129B6D42C061A6700F33CDD /* PhotoPickerViewModel.swift */; };
+		1131E8832BE347F300D40120 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131E8822BE347F300D40120 /* LaunchView.swift */; };
+		1131E8892BE34F2B00D40120 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131E8882BE34F2B00D40120 /* CameraView.swift */; };
+		1131E88D2BE34F7D00D40120 /* BookListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131E88C2BE34F7D00D40120 /* BookListView.swift */; };
+		1131E8902BE35D7A00D40120 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131E88F2BE35D7A00D40120 /* CameraViewModel.swift */; };
+		1131E8932BE3616100D40120 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131E8922BE3616100D40120 /* Camera.swift */; };
+		1131E8972BE6887A00D40120 /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131E8962BE6887A00D40120 /* CameraPreviewView.swift */; };
+		1131E89A2BE9F3E200D40120 /* OCRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131E8992BE9F3E200D40120 /* OCRView.swift */; };
+		1131E89C2BE9F5FC00D40120 /* OCRViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131E89B2BE9F5FB00D40120 /* OCRViewModel.swift */; };
 		1146863F2BC021A20072F8D8 /* WhiteLensApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1146863E2BC021A20072F8D8 /* WhiteLensApp.swift */; };
 		114686412BC021A20072F8D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114686402BC021A20072F8D8 /* ContentView.swift */; };
 		114686432BC021A20072F8D8 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114686422BC021A20072F8D8 /* Item.swift */; };
 		114686452BC021A40072F8D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 114686442BC021A40072F8D8 /* Assets.xcassets */; };
 		114686482BC021A40072F8D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 114686472BC021A40072F8D8 /* Preview Assets.xcassets */; };
+		11708EC52C11AAA80092A997 /* BookListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11708EC42C11AAA80092A997 /* BookListViewModel.swift */; };
+		11708EC82C11BECB0092A997 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11708EC72C11BECB0092A997 /* DataSource.swift */; };
+		1197F2632C102C3B006F75D2 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1197F2622C102C3B006F75D2 /* Book.swift */; };
+		1197F2662C1031F1006F75D2 /* BackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1197F2652C1031F1006F75D2 /* BackgroundModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1129B6CF2C061A4E00F33CDD /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
+		1129B6D42C061A6700F33CDD /* PhotoPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerViewModel.swift; sourceTree = "<group>"; };
+		1131E8822BE347F300D40120 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		1131E8882BE34F2B00D40120 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		1131E88C2BE34F7D00D40120 /* BookListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListView.swift; sourceTree = "<group>"; };
+		1131E88F2BE35D7A00D40120 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
+		1131E8922BE3616100D40120 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		1131E8962BE6887A00D40120 /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
+		1131E8992BE9F3E200D40120 /* OCRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRView.swift; sourceTree = "<group>"; };
+		1131E89B2BE9F5FB00D40120 /* OCRViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRViewModel.swift; sourceTree = "<group>"; };
 		1146863B2BC021A20072F8D8 /* WhiteLens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhiteLens.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1146863E2BC021A20072F8D8 /* WhiteLensApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteLensApp.swift; sourceTree = "<group>"; };
 		114686402BC021A20072F8D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		114686422BC021A20072F8D8 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		114686442BC021A40072F8D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		114686472BC021A40072F8D8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		11708EC42C11AAA80092A997 /* BookListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewModel.swift; sourceTree = "<group>"; };
+		11708EC72C11BECB0092A997 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		1173D18D2C1CAACE00C0D29C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1197F2622C102C3B006F75D2 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		1197F2652C1031F1006F75D2 /* BackgroundModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +63,152 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1129B6CE2C061A3300F33CDD /* PhotoPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				1129B6D22C061A5600F33CDD /* ViewModel */,
+				1129B6D12C061A5100F33CDD /* View */,
+			);
+			path = PhotoPickerView;
+			sourceTree = "<group>";
+		};
+		1129B6D12C061A5100F33CDD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1129B6CF2C061A4E00F33CDD /* PhotoPickerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1129B6D22C061A5600F33CDD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1129B6D42C061A6700F33CDD /* PhotoPickerViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1131E87F2BE347BF00D40120 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				1129B6CE2C061A3300F33CDD /* PhotoPickerView */,
+				1131E8982BE9F3CF00D40120 /* OCRView */,
+				1131E8852BE34F0200D40120 /* ReadBook */,
+				1131E8842BE34EF200D40120 /* ScanBook */,
+				1131E8802BE347C900D40120 /* LaunchView */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		1131E8802BE347C900D40120 /* LaunchView */ = {
+			isa = PBXGroup;
+			children = (
+				1131E8812BE347E200D40120 /* View */,
+			);
+			path = LaunchView;
+			sourceTree = "<group>";
+		};
+		1131E8812BE347E200D40120 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1131E8822BE347F300D40120 /* LaunchView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1131E8842BE34EF200D40120 /* ScanBook */ = {
+			isa = PBXGroup;
+			children = (
+				1131E8942BE6885E00D40120 /* CameraPreviewView */,
+				1131E8862BE34F0A00D40120 /* CameraView */,
+			);
+			path = ScanBook;
+			sourceTree = "<group>";
+		};
+		1131E8852BE34F0200D40120 /* ReadBook */ = {
+			isa = PBXGroup;
+			children = (
+				1131E88A2BE34F6000D40120 /* BookList */,
+			);
+			path = ReadBook;
+			sourceTree = "<group>";
+		};
+		1131E8862BE34F0A00D40120 /* CameraView */ = {
+			isa = PBXGroup;
+			children = (
+				1131E88E2BE35D6B00D40120 /* ViewModel */,
+				1131E8872BE34F2000D40120 /* View */,
+			);
+			path = CameraView;
+			sourceTree = "<group>";
+		};
+		1131E8872BE34F2000D40120 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1131E8882BE34F2B00D40120 /* CameraView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1131E88A2BE34F6000D40120 /* BookList */ = {
+			isa = PBXGroup;
+			children = (
+				11708EC32C11AA470092A997 /* ViewModel */,
+				1131E88B2BE34F6900D40120 /* View */,
+			);
+			path = BookList;
+			sourceTree = "<group>";
+		};
+		1131E88B2BE34F6900D40120 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1131E88C2BE34F7D00D40120 /* BookListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1131E88E2BE35D6B00D40120 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1131E88F2BE35D7A00D40120 /* CameraViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1131E8912BE3615900D40120 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1131E8922BE3616100D40120 /* Camera.swift */,
+				1197F2622C102C3B006F75D2 /* Book.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1131E8942BE6885E00D40120 /* CameraPreviewView */ = {
+			isa = PBXGroup;
+			children = (
+				1131E8952BE6886D00D40120 /* View */,
+			);
+			path = CameraPreviewView;
+			sourceTree = "<group>";
+		};
+		1131E8952BE6886D00D40120 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1131E8962BE6887A00D40120 /* CameraPreviewView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1131E8982BE9F3CF00D40120 /* OCRView */ = {
+			isa = PBXGroup;
+			children = (
+				11708ECA2C11DBB60092A997 /* ViewModel */,
+				11708EC92C11DBB10092A997 /* View */,
+			);
+			path = OCRView;
+			sourceTree = "<group>";
+		};
 		114686322BC021A20072F8D8 = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +228,11 @@
 		1146863D2BC021A20072F8D8 /* WhiteLens */ = {
 			isa = PBXGroup;
 			children = (
+				1173D18D2C1CAACE00C0D29C /* Info.plist */,
+				11708EC62C11BEC00092A997 /* Data */,
+				1197F2642C1031D7006F75D2 /* Utils */,
+				1131E8912BE3615900D40120 /* Model */,
+				1131E87F2BE347BF00D40120 /* Presentation */,
 				1146863E2BC021A20072F8D8 /* WhiteLensApp.swift */,
 				114686402BC021A20072F8D8 /* ContentView.swift */,
 				114686422BC021A20072F8D8 /* Item.swift */,
@@ -68,6 +248,46 @@
 				114686472BC021A40072F8D8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		11708EC32C11AA470092A997 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				11708EC42C11AAA80092A997 /* BookListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		11708EC62C11BEC00092A997 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				11708EC72C11BECB0092A997 /* DataSource.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		11708EC92C11DBB10092A997 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1131E8992BE9F3E200D40120 /* OCRView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		11708ECA2C11DBB60092A997 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1131E89B2BE9F5FB00D40120 /* OCRViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1197F2642C1031D7006F75D2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1197F2652C1031F1006F75D2 /* BackgroundModifier.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -107,11 +327,12 @@
 			};
 			buildConfigurationList = 114686362BC021A20072F8D8 /* Build configuration list for PBXProject "WhiteLens" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = ko;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = 114686322BC021A20072F8D8;
 			productRefGroup = 1146863C2BC021A20072F8D8 /* Products */;
@@ -140,8 +361,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1131E8932BE3616100D40120 /* Camera.swift in Sources */,
+				11708EC82C11BECB0092A997 /* DataSource.swift in Sources */,
+				1129B6D52C061A6700F33CDD /* PhotoPickerViewModel.swift in Sources */,
+				1197F2632C102C3B006F75D2 /* Book.swift in Sources */,
 				114686412BC021A20072F8D8 /* ContentView.swift in Sources */,
+				1131E89C2BE9F5FC00D40120 /* OCRViewModel.swift in Sources */,
+				11708EC52C11AAA80092A997 /* BookListViewModel.swift in Sources */,
+				1131E8972BE6887A00D40120 /* CameraPreviewView.swift in Sources */,
+				1131E88D2BE34F7D00D40120 /* BookListView.swift in Sources */,
+				1131E8832BE347F300D40120 /* LaunchView.swift in Sources */,
+				1131E89A2BE9F3E200D40120 /* OCRView.swift in Sources */,
+				1129B6D02C061A4E00F33CDD /* PhotoPickerView.swift in Sources */,
 				114686432BC021A20072F8D8 /* Item.swift in Sources */,
+				1131E8902BE35D7A00D40120 /* CameraViewModel.swift in Sources */,
+				1131E8892BE34F2B00D40120 /* CameraView.swift in Sources */,
+				1197F2662C1031F1006F75D2 /* BackgroundModifier.swift in Sources */,
 				1146863F2BC021A20072F8D8 /* WhiteLensApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,11 +514,15 @@
 				DEVELOPMENT_TEAM = W43DLLFB4Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WhiteLens/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "카메라 접근 허용";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "앨범 쓰기 권한 허용";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,11 +547,15 @@
 				DEVELOPMENT_TEAM = W43DLLFB4Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WhiteLens/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "카메라 접근 허용";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "앨범 쓰기 권한 허용";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
