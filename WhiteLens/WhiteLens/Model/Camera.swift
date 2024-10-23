@@ -5,7 +5,6 @@
 //  Created by BAE on 5/2/24.
 //
 
-
 import AVFoundation
 import UIKit
 
@@ -17,56 +16,61 @@ class Camera: NSObject, ObservableObject {
     var photoData = Data(count: 0)
     @Published var recentImage: UIImage?
     
-    // 카메라 셋업 과정을 담당하는 함수, positio
     func setUpCamera() {
+        print("Setting up camera")
         if let device = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back) {
-            do { // 카메라가 사용 가능하면 세션에 input과 output을 연결
+            do {
                 videoDeviceInput = try AVCaptureDeviceInput(device: device)
                 if session.canAddInput(videoDeviceInput) {
                     session.addInput(videoDeviceInput)
-                    
+                } else {
+                    print("Could not add video device input to the session")
+                    return
                 }
                 
                 if session.canAddOutput(output) {
                     session.addOutput(output)
                     output.isHighResolutionCaptureEnabled = true
                     output.maxPhotoQualityPrioritization = .quality
+                } else {
+                    print("Could not add photo output to the session")
+                    return
                 }
                 
-                session.startRunning() // 세션 시작
+                DispatchQueue.global(qos: .background).async { [weak self] in
+                    self?.session.startRunning()
+                }
             } catch {
-                print(error) // 에러 프린트
+                print("Error setting up camera: \(error)")
             }
+        } else {
+            print("Could not access the back camera")
         }
     }
     
     func requestAndCheckPermissions() {
-        // 카메라 권한 상태 확인
         switch AVCaptureDevice.authorizationStatus(for: .video) {
         case .notDetermined:
-            // 권한 요청
             AVCaptureDevice.requestAccess(for: .video) { [weak self] authStatus in
                 if authStatus {
                     DispatchQueue.main.async {
                         self?.setUpCamera()
                     }
+                } else {
+                    print("Camera access denied")
                 }
             }
-        case .restricted:
-            break
+        case .restricted, .denied:
+            print("Camera access restricted or denied")
         case .authorized:
-            // 이미 권한 받은 경우 셋업
             setUpCamera()
-        default:
-            // 거절했을 경우
-            print("Permession declined")
+        @unknown default:
+            print("Unknown authorization status")
         }
     }
     
     func capturePhoto() {
-        // 사진 옵션 세팅
         let photoSettings = AVCapturePhotoSettings()
-        
         self.output.capturePhoto(with: photoSettings, delegate: self)
         print("[Camera]: Photo's taken")
     }
@@ -74,22 +78,16 @@ class Camera: NSObject, ObservableObject {
     func savePhoto(_ imageData: Data) {
         guard let image = UIImage(data: imageData) else { return }
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-        
-        // 사진 저장하기
         print("[Camera]: Photo's saved")
     }
-    
 }
 
 extension Camera: AVCapturePhotoCaptureDelegate {
-    func photoOutput(_ output: AVCapturePhotoOutput, willBeginCaptureFor resolvedSettings: AVCaptureResolvedPhotoSettings) {
-    }
+    func photoOutput(_ output: AVCapturePhotoOutput, willBeginCaptureFor resolvedSettings: AVCaptureResolvedPhotoSettings) {}
     
-    func photoOutput(_ output: AVCapturePhotoOutput, willCapturePhotoFor resolvedSettings: AVCaptureResolvedPhotoSettings) {
-    }
+    func photoOutput(_ output: AVCapturePhotoOutput, willCapturePhotoFor resolvedSettings: AVCaptureResolvedPhotoSettings) {}
     
-    func photoOutput(_ output: AVCapturePhotoOutput, didCapturePhotoFor resolvedSettings: AVCaptureResolvedPhotoSettings) {
-    }
+    func photoOutput(_ output: AVCapturePhotoOutput, didCapturePhotoFor resolvedSettings: AVCaptureResolvedPhotoSettings) {}
     
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         guard let imageData = photo.fileDataRepresentation() else { return }
@@ -98,4 +96,3 @@ extension Camera: AVCapturePhotoCaptureDelegate {
         print("[CameraModel]: Capture routine's done")
     }
 }
-

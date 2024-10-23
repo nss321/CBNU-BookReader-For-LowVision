@@ -20,15 +20,6 @@ struct BookListView: View {
                             Text(book.title)
                         }
                         Spacer()
-                        Button(action: {
-                            if let index = viewModel.books.firstIndex(of: book) {
-                                viewModel.deleteBook(at: IndexSet(integer: index))
-                            }
-                        }) {
-                            Image(systemName: "trash")
-                                .foregroundColor(.gray)
-                                .accessibilityLabel("Delete \(book.title)")
-                        }
                     }
                 }
                 .onDelete(perform: viewModel.deleteBook)
